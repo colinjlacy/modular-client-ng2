@@ -7,8 +7,8 @@ describe('modular-client-ng2 App', function() {
     page = new ModularClientNg2Page();
   });
 
-  it('should display message saying app works', () => {
+  it('should display message saying client works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('client works!');
   });
 });
