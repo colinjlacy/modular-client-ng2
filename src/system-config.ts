@@ -34,6 +34,7 @@ const barrels:string[] = [
     // App specific barrels.
     'client',
     'client/shared',
+    'client/internals',
 /** @cli-barrel */
 ];
 
