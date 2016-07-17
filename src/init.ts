@@ -1,5 +1,13 @@
 import { bootstrap } from '@angular/platform-browser-dynamic';
-import { ClientComponent } from './client';
+import { provideRouter } from '@angular/router';
 
-bootstrap(ClientComponent);
+import { ClientComponent, ClientConfig } from './client';
+
+let dependencies = [];
+
+if (ClientConfig.routes.length) {
+    dependencies.push(provideRouter(ClientConfig.routes));
+}
+
+bootstrap(ClientComponent, dependencies);
 

@@ -35,6 +35,7 @@ const barrels:string[] = [
     'client',
     'client/shared',
     'client/internals',
+    'client/modules',
 /** @cli-barrel */
 ];
 
