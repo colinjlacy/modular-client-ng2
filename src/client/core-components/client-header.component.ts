@@ -14,7 +14,7 @@ import { ClientConfig } from '../client-config';
         <nav class='navbar navbar-sticky-top navbar-dark bg-inverse'>
             <span class='navbar-brand'>{{appName}}</span>
             <ul class='nav navbar-nav pull-xs-right' *ngIf='showNav'>
-                <li class='nav-item' [class]="isActive(route)" *ngFor='let route of routes'>
+                <li class='nav-item' *ngFor='let route of routes'>
                     <a class='nav-link' [routerLink]="['/' + route.path]">{{route.routeName}}</a>
                 </li>
             </ul>
@@ -32,14 +32,6 @@ export class ClientHeaderComponent {
         this.appName = ClientConfig.appName;
         this.routes = ClientConfig.routes;
         this.showNav = !!this.routes && this.routes.length > 1;
-        console.log(this.router);
     }
 
-    public isActive(route): String {
-        if(route.path === '/') {
-            return route.path === this.router.url ? 'active' : '';
-        } else {
-            return this.router.url.split('/')[0] === route.path ? 'active' : '';
-        }
-    }
 }

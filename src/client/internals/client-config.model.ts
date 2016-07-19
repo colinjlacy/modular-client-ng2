@@ -5,12 +5,14 @@ import { ClientRouteConfig } from './client-route.model';
 
 export interface ClientConfigModel {
     appName: String,
+    rootRoute?: String,
     routes?: ClientRouteConfig
     version?: String
 }
 
 export class ClientConfigConstructor implements ClientConfigModel {
     public appName;
+    public rootRoute;
     public routes;
     public version;
     constructor(confObj) {

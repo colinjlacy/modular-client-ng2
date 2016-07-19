@@ -6,6 +6,7 @@ import { StarterRoutes, SecondRoutes } from './modules'
 
 export const ClientConfig = new ClientConfigConstructor({
     appName: 'Modular Client',
+    rootRoute: 'Second',
     routes: [
         ...StarterRoutes,
         ...SecondRoutes

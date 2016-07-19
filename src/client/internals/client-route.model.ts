@@ -5,7 +5,7 @@ import { Route } from '@angular/router';
 
 export interface ClientRoute extends Route {
     routeName: String,
-    baseNav?: boolean,
+    mainNav?: boolean,
     appRoot?: boolean
 }
 

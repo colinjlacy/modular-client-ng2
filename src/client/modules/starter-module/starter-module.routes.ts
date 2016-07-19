@@ -5,5 +5,5 @@ import { ClientRouteConfig } from '../../internals';
 import { StarterComponent } from './starter-module.component';
 
 export const StarterRoutes: ClientRouteConfig = [
-    {routeName: 'Starter', path: '', component: StarterComponent}
+    {routeName: 'Starter', path: 'starter', component: StarterComponent}
 ];
