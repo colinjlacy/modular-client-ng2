@@ -1,9 +1,9 @@
 /**
  * Created by colinjlacy on 7/16/16.
  */
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgIf, NgFor, NgClass } from '@angular/common';
-import { ROUTER_DIRECTIVES, Router } from '@angular/router';
+import { ROUTER_DIRECTIVES, Router, ActivatedRoute } from '@angular/router';
 
 import { ClientConfig } from '../client-config';
 
