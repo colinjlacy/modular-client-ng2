@@ -14,8 +14,6 @@ if (ClientConfig.routes.length) {
                 index = i;
             }
         });
-        console.log(ClientConfig.routes);
-        console.log(ClientConfig.routes);
 
         ClientConfig.routes[index].path = '';
     }
