@@ -15,7 +15,9 @@ import { ClientConfig } from '../client-config';
             <span class='navbar-brand'>{{appName}}</span>
             <ul class='nav navbar-nav pull-xs-right' *ngIf='showNav'>
                 <li class='nav-item' *ngFor='let route of routes'>
-                    <a class='nav-link' [routerLink]="['/' + route.path]">{{route.routeName}}</a>
+                    <a class='nav-link'
+                       [routerLink]="['/' + route.path]"
+                       routerLinkActive="active">{{route.routeName}}</a>
                 </li>
             </ul>
         </nav>
@@ -30,7 +32,7 @@ export class ClientHeaderComponent {
 
     constructor(private router: Router) {
         this.appName = ClientConfig.appName;
-        this.routes = ClientConfig.routes;
+        this.routes = ClientConfig.routes.sort((a, b) => a.routeName > b.routeName);
         this.showNav = !!this.routes && this.routes.length > 1;
     }
 
